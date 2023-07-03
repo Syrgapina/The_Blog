@@ -1,0 +1,507 @@
+    body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .header .user-actions {
+            display: flex;
+        }
+
+        .header .user-actions a {
+            color: #fff;
+            margin-left: 10px;
+            text-decoration: none;
+        }
+
+        .main-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+            max-width: 600px;
+        }
+
+        .profile-info {
+            margin: 20px;
+        }
+
+        .profile-info label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .profile-info .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        .profile-form {
+            margin: 20px;
+        }
+
+        .profile-form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .profile-form input[type="text"],
+        .profile-form textarea {
+            display: block;
+            width: 300px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        .profile-form input[type="file"] {
+            margin-bottom: 10px;
+        }
+
+        .profile-form input[type="submit"] {
+            padding: 5px 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .profile-form img {
+            max-width: 200px;
+            max-height: 200px;
+            margin-bottom: 10px;
+        }
+
+        .profile-form .submit-button {
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .profile-image-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .delete-profile-img-button-container {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 5px;
+        }
+
+        .delete-profile-img-button {
+            padding: 5px 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .edit-profile-button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .edit-profile-button:hover {
+            background-color: #555;
+        }
+
+        .post {
+            background-color: #f1f1f1;
+            padding: 10px;
+            margin-bottom: 20px;
+            width: 530px;
+        }
+
+        .post h2 {
+            margin: 0;
+        }
+
+        .post p {
+            margin: 5px 0;
+        }
+
+        .post {
+            position: relative;
+        }
+
+        img {
+            width: 500px;
+            height: 500px;
+            display: block;
+            background-color: white;
+        }
+
+        .create-post-button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .create-post-button:hover {
+            background-color: #555;
+        }
+
+        .delete-post-button {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            font-size: 14px;
+            color: #888;
+            cursor: pointer;
+        }
+
+        .delete-post-button::before {
+            content: "X";
+        }
+
+        .edit-post-button {
+            position: absolute;
+            top: 5px;
+            right: 25px;
+            font-size: 14px;
+            color: #888;
+            cursor: pointer;
+        }
+
+        .edit-post-button::before {
+            content: "Ред.";
+        }
+
+        .comment-button {
+            background-color: #ccc;
+            color: #333;
+            padding: 5px 10px;
+            text-decoration: none;
+            border-radius: 4px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .comment-button:hover {
+            background-color: #ddd;
+        }
+
+        .submit-comment-button {
+            background-color: #333;
+            color: #fff;
+            padding: 5px 10px;
+            text-decoration: none;
+            border-radius: 4px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .submit-comment-button:hover {
+            background-color: #555;
+        }
+
+        .comment-input {
+            display: block;
+            margin-top: 10px;
+        }
+
+        p.comment {
+            margin-bottom: 10px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .edit-comment-button {
+            margin-left: 5px;
+            margin-right: 1px;
+            display:block;
+            font-size: 12px;
+            color: #888;
+            cursor: pointer;
+        }
+
+        .edit-comment-button:hover {
+            background-color: #9999;
+        }
+
+        .delete-comment-button {
+            margin-left: -400px;
+            margin-right: 1px;
+            display:block;
+            width: 15px;
+            font-size: 12px;
+            color: #888;
+            cursor: pointer;
+        }
+
+        .delete-comment-button::before {
+            content: "X";
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: grey;
+        }
+
+        a:visited {
+            color: black
+        }
+
+        a {
+            color: black
+        }
+
+        @font-face {
+          font-family: "bootstrap-icons";
+          src: url("../fonts/bootstrap-icons.woff");
+        }
+
+        .auth-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #f1f1f1;
+        }
+
+        .login-form {
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 10px;
+        }
+
+        .login-form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            width: 300px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        .login-form input[type="submit"] {
+            padding: 5px 10px;
+            background-color: #555;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .register-button {
+            margin-top: 20px;
+        }
+
+        .register-button a {
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+
+        .register-background-color {
+            background-color: #f1f1f1;
+        }
+
+        .register-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .register-form-container {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .register-form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .register-form input[type="text"],
+        .register-form input[type="password"] {
+            display: block;
+            width: 300px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        .register-form input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .register-form input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        .edit-post-form {
+            margin: 20px;
+        }
+
+        .edit-post-form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .edit-post-form input[type="text"] {
+            width: 300px;
+            padding: 5px;
+        }
+
+        .edit-post-form input[type="file"] {
+            margin-bottom: 10px;
+        }
+
+        .edit-post-form input[type="submit"] {
+            padding: 5px 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .edit-post-form img {
+            max-width: 300px;
+            max-height: 300px;
+            margin-bottom: 10px;
+        }
+
+        .edit-comment-form {
+            margin: 20px;
+        }
+
+        .edit-comment-form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .edit-comment-form input[type="text"] {
+            width: 300px;
+            padding: 5px;
+        }
+
+        .edit-comment-form input[type="submit"] {
+            padding: 5px 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .create-post-form {
+            margin-bottom: 20px;
+        }
+
+        .create-post-form input[type="text"],
+        .create-post-form input[type="file"] {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .create-post-form textarea {
+            display: block;
+            margin-bottom: 10px;
+            height: 200px;
+        }
+
+        .create-post-form input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 5px 10px;
+            text-decoration: none;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .create-post-form input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        .delete-comment-button-conf,
+        .cancel-comment-button-conf {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .delete-comment-button-conf,
+        .cancel-comment-button-conf {
+            background-color: #555;
+        }
+
+        .delete-post-button-conf,
+        .cancel-post-button-conf {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .delete-post-button-conf,
+        .cancel-post-button-conf {
+            background-color: #555;
+        }
+
+

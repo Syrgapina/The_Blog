@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>The Blog - Редактировать профиль</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %} " type="text/css">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-icons.css' %} " type="text/css">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/general_style.css' %} " type="text/css">
+</head>
+<body>
+    <header class="header">
+        <a href="/Daily_posts/home/" style="color: white"><h1>The Blog - Настройки</h1></a>
+        <div class="user-actions">
+            {% if request.user.is_authenticated %}
+                <form method="post" action="/users/login/">
+                    {% csrf_token %}
+                    <div class="btn-group dropleft">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ request.user.username }}
+                        </button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="/users/profile/{{ user.username }}" style="color: black">Профиль</a>
+                        <button type="submit" class="dropdown-item" style="color: black">Выйти</button>
+                      </div>
+                    </div>
+                </form>
+            {% else %}
+            <a href="/users/login/">Войти</a>
+            <a href="/users/registration/">Регистрация</a>
+            {% endif %}
+        </div>
+    </header>
+        <div class="profile-form">
+            <h2>Настройки пользователя</h2>
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <label for="first_name">Имя:</label>
+                <input type="text" id="first_name" name="first_name" required>
+                <label for="last_name">Фамилия:</label>
+                <input type="text" id="last_name" name="last_name" required>
+                <label for="email">Электронная почта:</label>
+                <input type="text" id="email" name="email" required>
+                <label for="date_of_birth">Дата рождения:</label>
+                <input type="text" id="date_of_birth" name="date_of_birth" required>
+                <label for="location">Местоположение:</label>
+                <input type="text" id="location" name="location" required>
+                <label for="about_me">О себе:</label>
+                <textarea id="about_me" name="about_me" required></textarea>
+                <label>Картинка профиля:</label>
+                {% if profile_form.image.url %}
+                <img src="http://127.0.0.1:8000/users{{ profile_form.image.url }}" alt="Изображение профиля"/>
+                <br>
+                <input type="file" id="image" name="image" accept="image/*">
+                <input type="submit" value="Сохранить">
+            </form>
+        </div>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/util.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
